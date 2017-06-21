@@ -1,0 +1,174 @@
+{% extends 'layout/layout.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+<div class="card wizard-card" data-color="red" id="wizard">
+    <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+    <div class="wizard-header">
+        <h3 class="wizard-title">
+            Ormuco Test
+        </h3>
+        <h5>This is one test for apply to magister xD. (FALTA TRADUCTOR)</h5>
+    </div>
+    <div class="wizard-navigation">
+        <ul>
+            <li><a href="#form" data-toggle="tab">Form</a></li>
+            <li><a href="#result" data-toggle="tab">Results</a></li>
+            <li><a href="#about" data-toggle="tab">About Me</a></li>
+            <li><a href="#doc" data-toggle="tab">Docs</a></li>
+        </ul>
+    </div>
+
+    <div class="tab-content">
+        <div class="tab-pane" id="form">
+            <form action="" method="POST">
+                {% if isOk %}
+
+                <div class="alert alert-success" role="alert">
+                    <div class="alert-icon">
+                        <i class="material-icons">thumb_up</i>
+                    </div>
+                    <strong>Well done!</strong> {{isOk}}.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">
+                                <i class="material-icons">close</i>
+                            </span>
+                    </button>
+                </div>
+
+                {% endif %}
+
+                {% if error %}
+
+
+                <div class="alert alert-danger" role="alert">
+                    <div class="alert-icon">
+                        <i class="material-icons">error</i>
+                    </div>
+                    <strong>Error!</strong> {{error}}.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">
+                                <i class="material-icons">close</i>
+                            </span>
+                    </button>
+                </div>
+
+                {% endif %}
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <div class="input-group">
+													<span class="input-group-addon">
+														<i class="material-icons">face</i>
+													</span>
+                            <div class="form-group label-floating">
+                                <label for="name" class="control-label">Your Name</label>
+                                <input name="name" id="name" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <div class="input-group">
+													<span class="input-group-addon">
+														<i class="material-icons">palette</i>
+													</span>
+                            <div class="form-group label-floating">
+                                <label for="color" class="control-label">Your Favorite Color</label>
+                                <input name="color" id="color" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+														<i class="material-icons">pets</i>
+													</span>
+                            <div class="form-group label-floating">
+                                <label for="pet" class="control-label">Pet</label>
+                                <select id="pet" name="pet" class="form-control">
+                                    <option disabled="" selected=""></option>
+                                    <option value="Dog">Dog</option>
+                                    <option value="Cat">Cat</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center">
+                        <button class="btn btn-success"><i class="material-icons">save</i> Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane" id="result">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="text-center"><em>Thi is the result save data from database sqlite3</em></p>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr class="">
+                            <th class="text-center text-danger">Name</th>
+                            <th class="text-center text-danger">Favorite Color</th>
+                            <th class="text-center text-danger">Pet</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for user in users %}
+                        <tr>
+                            <td class="text-center"><strong>{{user.name}}</strong></td>
+                            <td class="text-center">{{user.color}}</td>
+                            <td class="text-center">{{user.pet}}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane" id="about">
+            <div class="row">
+                <h4 class="info-text"> Drop us a small description.</h4>
+                <div class="col-sm-6 col-sm-offset-1">
+                    <div class="form-group">
+                        <label>Room description</label>
+                        <textarea class="form-control" placeholder="" rows="6"></textarea>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label class="control-label">Example</label>
+                        <p class="description">"The room really nice name is recognized as being
+                            a really awesome room. We use it every sunday when we go fishing and
+                            we catch a lot. It has some kind of magic shield around it."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="doc">
+            <div class="row">
+                <h4 class="info-text"> Drop us a small description.</h4>
+                <div class="col-sm-6 col-sm-offset-1">
+                    <div class="form-group">
+                        <label>Room description</label>
+                        <textarea class="form-control" placeholder="" rows="6"></textarea>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label class="control-label">Example</label>
+                        <p class="description">"The room really nice name is recognized as being
+                            a really awesome room. We use it every sunday when we go fishing and
+                            we catch a lot. It has some kind of magic shield around it."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

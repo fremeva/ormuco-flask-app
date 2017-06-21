@@ -1,0 +1,52 @@
+/* Alert New Styles */
+.alert {
+    border: 0;
+    border-radius: 0;
+    color: #FFFFFF;
+    padding-top: .9rem;
+    padding-bottom: .9rem;
+}
+
+.alert.alert-success {
+    background-color: rgba(24, 206, 15, 0.8);
+}
+
+.alert.alert-danger {
+    background-color: rgba(255, 54, 54, 0.8);
+}
+
+.alert.alert-warning {
+    background-color: rgba(255, 178, 54, 0.8);
+}
+
+.alert.alert-info {
+    background-color: rgba(44, 168, 255, 0.8);
+}
+
+.alert.alert-primary {
+    background-color: rgba(249, 99, 50, 0.8);
+}
+
+.alert .alert-icon {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    margin-top: -1px;
+}
+
+.alert strong {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.alert i.fa, .alert i.now-ui-icons {
+    font-size: 20px;
+}
+
+.alert .close {
+    color: #FFFFFF;
+    opacity: .9;
+    text-shadow: none;
+    line-height: 0;
+    outline: 0;
+}

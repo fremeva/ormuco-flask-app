@@ -1,0 +1,7 @@
+*.DS_*
+#Mr Developer
+venv
+*.pyc
+migrations
+#Data Base
+*.db
