@@ -6,14 +6,13 @@
 
     <div class="wizard-header">
         <h3 class="wizard-title">
-            Ormuco Test
+            Ormuco Technical Test
         </h3>
-        <h5>This is one test for apply to magister xD. (FALTA TRADUCTOR)</h5>
     </div>
     <div class="wizard-navigation">
         <ul>
             <li><a href="#form" data-toggle="tab">Form</a></li>
-            <li><a href="#result" data-toggle="tab">Results</a></li>
+            <li><a href="#records" data-toggle="tab">Records</a></li>
             <li><a href="#about" data-toggle="tab">About Me</a></li>
             <li><a href="#doc" data-toggle="tab">Docs</a></li>
         </ul>
@@ -87,7 +86,6 @@
                             <div class="form-group label-floating">
                                 <label for="pet" class="control-label">Pet</label>
                                 <select id="pet" name="pet" class="form-control">
-                                    <option disabled="" selected=""></option>
                                     <option value="Dog">Dog</option>
                                     <option value="Cat">Cat</option>
                                 </select>
@@ -103,13 +101,12 @@
                 </div>
             </form>
         </div>
-        <div class="tab-pane" id="result">
+        <div class="tab-pane" id="records">
             <div class="row">
                 <div class="col-xs-12">
-                    <p class="text-center"><em>Thi is the result save data from database sqlite3</em></p>
                 </div>
-                <div class="col-sm-6 col-sm-offset-3">
-                    <table class="table table-hover">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <table class="table table-bordered">
                         <thead>
                         <tr class="">
                             <th class="text-center text-danger">Name</th>
@@ -133,42 +130,64 @@
         </div>
         <div class="tab-pane" id="about">
             <div class="row">
-                <h4 class="info-text"> Drop us a small description.</h4>
-                <div class="col-sm-6 col-sm-offset-1">
-                    <div class="form-group">
-                        <label>Room description</label>
-                        <textarea class="form-control" placeholder="" rows="6"></textarea>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label class="control-label">Example</label>
-                        <p class="description">"The room really nice name is recognized as being
-                            a really awesome room. We use it every sunday when we go fishing and
-                            we catch a lot. It has some kind of magic shield around it."</p>
-                    </div>
-                </div>
+                <h4 class="info-text">Fredy Mendoza Vargas.</h4>
+                <p class="info-text text-muted"><em>Systems Engineer/ Developer / Passionate / Responsible</em></h5>
+                    <div class="col-sm-6 col-sm-offset-1">
+                        <div class="form-group">
+                            <label>Professional extract:</label>
+                <p class="description text-justify">
+                    Systems Engineer at Universidad Tecnológica de Bolívar, with skills to perform at an
+                    interdisciplinary level in administrative, technical and social field. With experience in
+                    development of WEB applications, mobiles, analysis, design and implementation thereof; Knowledge in:
+                    Python, LINUX, PHP, C #, Node JS, JavaScripts, AngularJS, MongoDB, MySQL, JAVA.
+                </p>
+
             </div>
         </div>
-        <div class="tab-pane" id="doc">
-            <div class="row">
-                <h4 class="info-text"> Drop us a small description.</h4>
-                <div class="col-sm-6 col-sm-offset-1">
-                    <div class="form-group">
-                        <label>Room description</label>
-                        <textarea class="form-control" placeholder="" rows="6"></textarea>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label class="control-label">Example</label>
-                        <p class="description">"The room really nice name is recognized as being
-                            a really awesome room. We use it every sunday when we go fishing and
-                            we catch a lot. It has some kind of magic shield around it."</p>
-                    </div>
-                </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <p class="description text-justify">Capability to work in teams or individually, improvise and deal with
+                    the unknown,
+                    excellent interpersonal relationships. High degree of responsibility, willingness to learn and easy
+                    to adapt.</p>
+
             </div>
         </div>
     </div>
+</div>
+<div class="tab-pane" id="doc">
+    <div class="row">
+        <h4 class="info-text"> View small description.</h4>
+        <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-offset-3">
+                <a href="https://github.com/fremeva/ormuco-flask-app.git" target="_blank">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                         title="View Simple App Code">
+                        <input type="radio" value="Design">
+                        <div class="icon">
+                            <i class="material-icons">code</i>
+                        </div>
+                        <h6>Simple Flask Web Apps</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-offset-3">
+                <a href="https://github.com/fremeva/ormuco-ansible-project.git" target="_blank">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                         title="View & clone to Ansible playbook project">
+                        <input type="radio" value="Design">
+                        <div class="icon">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </div>
+                        <h6>Ansible Playbook Repository</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 </div>
 {%endblock%}

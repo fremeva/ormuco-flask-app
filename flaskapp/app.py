@@ -21,15 +21,19 @@ def index():
             name = request.form['name']
             color = request.form['color']
             pet = request.form['pet']
-            # save data
-            db.session.add(UserModel(str(name).upper(), color, pet))
-            db.session.commit()
-            isOk = 'Save Data! :)'
+            if (name and color and pet):
+                # save data
+                db.session.add(UserModel(str(name).upper(), color, pet))
+                db.session.commit()
+                isOk = 'Save Data! :)'
+                error = None
+            else:
+                error = 'All fields are required. Please try again'
         except exc.IntegrityError as err:
             db.session.rollback() #Exception Rollback database
-            error = 'Duplicate Name'
+            error = err.message
         except Exception as e:
-            print e.message
+            error = e.message
         finally:
             db.session.close() #close session Database
 
